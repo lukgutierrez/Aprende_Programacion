@@ -1,5 +1,7 @@
+import 'package:curso_programacionbasica/src/pages_tabs/plataformas_tabs.dart';
+import 'package:curso_programacionbasica/src/pages_tabs/profesores_tabs.dart';
 import 'package:flutter/material.dart';
-
+//PANTALLA DE INICIO
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,9 +26,9 @@ class HomePage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              ListView(),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              ListView(children: [Plataformas()]),
+              ListView(children: [Profesores()],),
+              ListView()
             ],
           ),
         ),
