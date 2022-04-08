@@ -4,3 +4,5 @@
 git remote add main https://github.com/lukgutierrez/aprende_programacion.git
 2°
 git push -u origin main
+3°Si falla el segundo paso
+git push origin main
