@@ -1,0 +1,6 @@
+//COMO SUBIR TU PROYECTO A GITHUB ;)
+
+1°
+git remote add main https://github.com/lukgutierrez/aprende_programacion.git
+2°
+git push -u origin main
