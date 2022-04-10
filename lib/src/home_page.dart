@@ -27,8 +27,8 @@ class HomePage extends StatelessWidget {
           body: TabBarView(
             children: [
               ListView(children: [Plataformas()]),
-              ListView(children: [Profesores()],),
-              ListView()
+              ListView(children: [Profesores()]),
+              ListView(children: [Profesores()])
             ],
           ),
         ),

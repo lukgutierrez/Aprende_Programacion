@@ -11,35 +11,16 @@ class _PlataformasState extends State<Plataformas> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            margin: EdgeInsets.all(15),
-            elevation: 10,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Column(
-                children: <Widget>[
-                  Image(
-                    image: NetworkImage(
-                        'https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.6435-9/60195055_1818484058296753_2322981041121263616_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=19026a&_nc_ohc=Wu9_VBPaPXkAX8pU_hY&_nc_ht=scontent.ftuc1-1.fna&oh=00_AT9moe32yjPRdXhE-eSAiI3l4bCTq7ax7zJmZIHAVRE04A&oe=626DB10F'),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    child: Text('PLATZI'),
-                  ),
-                ],
-              ),
-            )),
-        GestureDetector(onTap: () async {
-          const url = "https://www.youtube.com/user/canalfisicaparatodos";
-          if (await canLaunch(url)) {
-            await launch(url);
-          } else {
-            throw "Could not launch $url";
-          }
-          child:
-          Card(
+        GestureDetector(
+          onTap: () async {
+            const url = "https://www.youtube.com/watch?v=QTDPOxnfRaI&list=PLv6CkzbbGAlVcPiYTcVdgLtGFleOUskNM";
+            if (await canLaunch(url)) {
+              await launch(url);
+            } else {
+              throw "Could not launch $url";
+            }
+          },
+          child: Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
               margin: EdgeInsets.all(15),
@@ -50,7 +31,7 @@ class _PlataformasState extends State<Plataformas> {
                   children: <Widget>[
                     Image(
                       image: NetworkImage(
-                          'https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.6435-9/60195055_1818484058296753_2322981041121263616_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=19026a&_nc_ohc=Wu9_VBPaPXkAX8pU_hY&_nc_ht=scontent.ftuc1-1.fna&oh=00_AT9moe32yjPRdXhE-eSAiI3l4bCTq7ax7zJmZIHAVRE04A&oe=626DB10F'),
+                          'https://scontent-gru2-2.xx.fbcdn.net/v/t1.6435-9/49428955_1707602376051589_5233162705212276736_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_ohc=eqXN2VQV9jkAX_arbsC&_nc_oc=AQky9qMD-gfjA5vnkaAvxaPUDXekjbyFg2ESR18nB-DuCTpy1RG7XPmglcxQCbLdaCU&_nc_ht=scontent-gru2-2.xx&oh=00_AT8jWQ-Fu5RVkQiFIzQlIhExmfShnlUQphrzLc_5uDIeCg&oe=62789A5F'),
                     ),
                     Container(
                       padding: EdgeInsets.all(10),
@@ -58,8 +39,39 @@ class _PlataformasState extends State<Plataformas> {
                     ),
                   ],
                 ),
-              ));
-        })
+              )),
+        ),
+         GestureDetector(
+          onTap: () async {
+            const url = "https://ed.team/cursos/programacion";
+            if (await canLaunch(url)) {
+              await launch(url);
+            } else {
+              throw "Could not launch $url";
+            }
+          },
+          child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              margin: EdgeInsets.all(15),
+              elevation: 10,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Column(
+                  children: <Widget>[
+                    Image(
+                      image: NetworkImage(
+                          'https://scontent-gru2-2.xx.fbcdn.net/v/t1.6435-9/49428955_1707602376051589_5233162705212276736_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_ohc=eqXN2VQV9jkAX_arbsC&_nc_oc=AQky9qMD-gfjA5vnkaAvxaPUDXekjbyFg2ESR18nB-DuCTpy1RG7XPmglcxQCbLdaCU&_nc_ht=scontent-gru2-2.xx&oh=00_AT8jWQ-Fu5RVkQiFIzQlIhExmfShnlUQphrzLc_5uDIeCg&oe=62789A5F'),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Text('EDTEAM'),
+                    ),
+                  ],
+                ),
+              )),
+        )
+        
       ],
     );
   }
