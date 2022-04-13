@@ -11,6 +11,9 @@ class HomePage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+
+            //TABS MENUS
+            
             bottom: TabBar(
               tabs: [
                 Tab(child: Text("PLATAFORMAS")),

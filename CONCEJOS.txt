@@ -6,3 +6,9 @@ git remote add main https://github.com/lukgutierrez/aprende_programacion.git
 git push -u origin main
 3°Si falla el segundo paso
 git push origin main
+
+COLOR DE LA APP
+#00053C
+
+https://scontent-gru2-2.xx.fbcdn.net/v/t1.6435-9/49428955_1707602376051589_5233162705212276736_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_ohc=eqXN2VQV9jkAX_arbsC&_nc_oc=AQky9qMD-gfjA5vnkaAvxaPUDXekjbyFg2ESR18nB-DuCTpy1RG7XPmglcxQCbLdaCU&_nc_ht=scontent-gru2-2.xx&oh=00_AT8jWQ-Fu5RVkQiFIzQlIhExmfShnlUQphrzLc_5uDIeCg&oe=62789A5F
+https://ed.team/cursos/programacion
