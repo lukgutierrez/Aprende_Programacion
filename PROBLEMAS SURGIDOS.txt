@@ -1,0 +1,4 @@
+CONSEJO CUANDO TRABAJEMOS CON ROW Y LISTTILE.
+Al Listtile tenemos que expecificar el tamaño que va a ocupar en el ROW.
+https://stackoverflow.com/questions/62041954/placing-listtiles-in-a-row 
+
