@@ -9,29 +9,38 @@ class _PaginaInformativaState extends State<PaginaInformativa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(color: Colors.white),
+        elevation: 0.0,
+      ),
       body: Column(
         children: [
           Stack(
             clipBehavior: Clip.none,
             children: [
               Container(
-                width: 400.0,
-                height: 200.0,
-                color: Colors.red,
-              ),
+                  width: 400.0,
+                  height: 180.0,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/platzifondo.png"),
+                          fit: BoxFit.cover))),
               Positioned(
                 left: 10.0,
                 bottom: -80,
                 child: Row(
                   children: [
                     Container(
+                      width: 100,
+                      height: 100,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.blue,
-                          width: 50.0,
-                        ),
-                      ),
+                          border: Border.all(width: 6, color: Colors.white),
+                          image: DecorationImage(
+                              image: AssetImage("assets/platzi.jpg"),
+                              fit: BoxFit.cover),
+                          shape: BoxShape.circle),
                     ),
                     SizedBox(
                       width: 250,
@@ -45,32 +54,50 @@ class _PaginaInformativaState extends State<PaginaInformativa> {
               ),
             ],
           ),
-          Divider(height: 80.0,color: Colors.transparent,),
-          Contenido(),
-          Contenido(),
-          Contenido(),
+          Divider(
+            height: 80.0,
+            color: Colors.transparent,
+          ),
+          Lista(
+              ImageIcon(
+                AssetImage("assets/iconnota.png"),
+                color: Color(0xff00053C),
+                size: 40,
+              ),
+              Text("DESCRIPCIÓN"),
+              Text(
+                "Programa desde cero, domina Javascript, entiende HTML y aprende de algoritmos. Sí, desde cero. Entenderás la lógica del código, cómo piensan los programadores y cómo programar juegos, proyectos y hasta robots y electrónica. Aprender a programar no es fácil, pero Platzi lo hace efectivo.",
+                textAlign: TextAlign.justify,
+              )),
+          Lista(
+              ImageIcon(
+                AssetImage("assets/iconfree.png"),
+                color: Color(0xff00053C),
+                size: 40,
+              ),
+              Text("CURSO"),
+              Text("El Curso es Totalmente Gratuito y en Español.",
+                  textAlign: TextAlign.justify)),
+          Lista(
+              ImageIcon(
+                AssetImage("assets/iconyoutube.png"),
+                color: Color(0xff00053C),
+                
+                size: 40,
+              ),
+              Text("YOUTUBE"),
+              Text("Hacer Ckick")),
+          ElevatedButton(onPressed: () {}, child: Text("INICIAR CURSO"))
         ],
       ),
     );
   }
 }
 
-class Contenido extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ListTile(
-          leading: Icon(Icons.abc_outlined),
-          // leading: ImageIcon(
-          //   AssetImage("assets/icon/hlep.png"),
-          //   color: Colors.black,
-          //   size: 80,
-          // ),
-          subtitle: Text("Esto sucede cuando ListView no tiene una altura restringida, lo que hace que tenga una altura infinita, puede resolver esto usando dos soluciones"),
-          title: Text("DESCRIPCIÓN"),
-        ),
-      ],
-    );
-  }
+Lista(image, titulo, subtitulo) {
+  return ListTile(
+    leading: image,
+    title: titulo,
+    subtitle: subtitulo,
+  );
 }
