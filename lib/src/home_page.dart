@@ -1,6 +1,7 @@
 import 'package:curso_programacionbasica/src/pages_tabs/plataformas_tabs.dart';
 import 'package:curso_programacionbasica/src/pages_tabs/profesores_tabs.dart';
 import 'package:flutter/material.dart';
+
 //PANTALLA DE INICIO
 class HomePage extends StatelessWidget {
   @override
@@ -11,9 +12,8 @@ class HomePage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-
             //TABS MENUS
-            
+
             bottom: TabBar(
               tabs: [
                 Tab(child: Text("PLATAFORMAS")),

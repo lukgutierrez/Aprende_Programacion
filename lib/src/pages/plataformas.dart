@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PaginaInformativa extends StatefulWidget {
   @override
@@ -25,7 +26,7 @@ class _PaginaInformativaState extends State<PaginaInformativa> {
                   height: 180.0,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("assets/platzifondo.png"),
+                          image: AssetImage("assets/platziportada2.jpg"),
                           fit: BoxFit.cover))),
               Positioned(
                 left: 10.0,
@@ -76,18 +77,32 @@ class _PaginaInformativaState extends State<PaginaInformativa> {
                 size: 40,
               ),
               Text("CURSO"),
-              Text("El Curso es Totalmente Gratuito y en Español.",
+              Text("El curso es totalmente gratuito y en español.",
                   textAlign: TextAlign.justify)),
           Lista(
               ImageIcon(
-                AssetImage("assets/iconyoutube.png"),
+                AssetImage("assets/herramienta.png"),
                 color: Color(0xff00053C),
-                
                 size: 40,
               ),
-              Text("YOUTUBE"),
-              Text("Hacer Ckick")),
-          ElevatedButton(onPressed: () {}, child: Text("INICIAR CURSO"))
+              Text("HERRAMIENTAS NECESARIAS"),
+              Text("Una computadora y conexion a internet.")),
+          ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Color(0xff00053C),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  elevation: 10,
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30))),
+              onPressed: () async {
+                const url = "https://platzi.com/programar";
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw "Could not launch $url";
+                }
+              },
+              child: Text("INICIAR CURSO"))
         ],
       ),
     );
