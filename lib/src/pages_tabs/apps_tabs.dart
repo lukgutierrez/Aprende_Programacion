@@ -1,8 +1,7 @@
-import 'package:curso_programacionbasica/src/pages/plataformas.dart';
 import 'package:curso_programacionbasica/src/pages/profesores.dart';
 import 'package:flutter/material.dart';
 
-//PLATAFORMAS TABS
+//APPS TABS
 
 class Profesores extends StatefulWidget {
   @override
@@ -14,17 +13,17 @@ class _ProfesoresState extends State<Profesores> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        //FERNANDO HERRERA
+        //APPS
         PlataformasContenido(
           () async {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => PaginaFernadoHerrera()),
+              MaterialPageRoute(builder: (context) => PaginaFernadoHerrera()),
             );
           },
           AssetImage('assets/fenandoherrera.jpg'),
-          Text('FERNANDO HERRERA', style: TextStyle(fontSize: 15.0, color: Colors.white)),
+          Text('FERNANDO HERRERA',
+              style: TextStyle(fontSize: 15.0, color: Colors.white)),
         ),
       ],
     );

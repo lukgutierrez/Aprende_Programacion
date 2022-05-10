@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                   child: Text("PROFESORES"),
                 ),
                 Tab(
-                  child: Text("LIBROS"),
+                  child: Text("APPS"),
                 ),
               ],
             ),
