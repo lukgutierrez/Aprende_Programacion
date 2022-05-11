@@ -13,22 +13,31 @@ class HomePage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Color(0xff00053C),
             //TABS MENUS
 
             bottom: TabBar(
-              
-
               tabs: [
-                Tab(child: Text("PLATAFORMAS")),
                 Tab(
-                  child: Text("PROFESORES"),
+                    child: Text(
+                  "PLATAFORMAS",
+                  style: TextStyle(fontSize: 12),
+                )),
+                Tab(
+                  child: Text(
+                    "PROFESORES",
+                    style: TextStyle(fontSize: 12),
+                  ),
                 ),
                 Tab(
-                  child: Text("APPS"),
+                  child: Text(
+                    "APPS",
+                    style: TextStyle(fontSize: 12),
+                  ),
                 ),
               ],
             ),
-            title: Text('Tabs Demo'),
+            title: Text('(PROGRAMIT;'),
           ),
           body: TabBarView(
             children: [
@@ -39,11 +48,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-
-      theme: ThemeData(
-        primaryColor: Color(0xff00053C),
-
-      ),
+      theme:
+          ThemeData(primaryColor: Color(0xff00053C), accentColor: Colors.white),
     );
   }
 }
