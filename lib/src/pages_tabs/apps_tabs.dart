@@ -1,30 +1,30 @@
-import 'package:curso_programacionbasica/src/pages/profesores.dart';
 import 'package:flutter/material.dart';
 
 //APPS TABS
 
-class Profesores extends StatefulWidget {
+class Apps extends StatefulWidget {
   @override
-  State<Profesores> createState() => _ProfesoresState();
+  State<Apps> createState() => _AppsState();
 }
 
-class _ProfesoresState extends State<Profesores> {
+class _AppsState extends State<Apps> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         //APPS
-        PlataformasContenido(
-          () async {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => PaginaFernadoHerrera()),
-            );
-          },
-          AssetImage('assets/fenandoherrera.jpg'),
-          Text('FERNANDO HERRERA',
-              style: TextStyle(fontSize: 15.0, color: Colors.white)),
+        ListTile(
+          leading: ImageIcon(AssetImage("assets/edeteam.jpg")),
         ),
+        Lista(
+            ImageIcon(
+              AssetImage("assets/edeteam.jpg"),
+              color: Colors.transparent,
+              size: 50,
+            ),
+            Text("CURSO"),
+            Text("El curso es totalmente gratuito y en español.",
+                textAlign: TextAlign.justify)),
       ],
     );
   }
@@ -32,28 +32,13 @@ class _ProfesoresState extends State<Profesores> {
 
 //FUNCION DE PLATAFORMAS
 
-PlataformasContenido(pagina, imagenportada, textocontenido) {
-  return GestureDetector(
-    onTap: pagina,
-    child: SizedBox(
-      width: 350.0,
-      child: Card(
-          color: Color(0xff00053C),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-          margin: EdgeInsets.all(30),
-          elevation: 5,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(30),
-            child: Column(
-              children: <Widget>[
-                Image(
-                  image: imagenportada,
-                ),
-                Container(padding: EdgeInsets.all(10), child: textocontenido),
-              ],
-            ),
-          )),
+Lista(image, titulo, subtitulo) {
+  return Padding(
+    padding: const EdgeInsets.all(10.0),
+    child: ListTile(
+      leading: image,
+      title: titulo,
+      subtitle: subtitulo,
     ),
   );
 }
